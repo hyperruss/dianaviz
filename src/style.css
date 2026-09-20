@@ -186,9 +186,20 @@ h1 em, h2 em { color: var(--coral); font-style: normal; }
 .status { display: inline-flex; align-items: center; text-transform: uppercase; letter-spacing: .1em; font-size: 9px; font-weight: 700; }
 .contact-card h3 { margin: 38px 0 13px; font: 500 29px/1.2 'Unbounded', sans-serif; letter-spacing: -.04em; }
 .contact-card > p { color: var(--muted); font-size: 13px; line-height: 1.65; }
-.button-light { width: 100%; margin-top: 20px; background: var(--blue); color: var(--navy); }
-.button-light:hover { background: var(--coral); color: white; }
+.contact-links { margin-top: 24px; display: grid; gap: 9px; }
+.contact-link { min-height: 66px; padding: 13px 16px; border: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto; align-items: center; transition: background .2s, color .2s, transform .2s; }
+.contact-link small { align-self: end; color: var(--muted); font-size: 8px; text-transform: uppercase; letter-spacing: .11em; }
+.contact-link strong { grid-column: 1; align-self: start; margin-top: 4px; font-size: 13px; }
+.contact-link > span { grid-column: 2; grid-row: 1/3; font-size: 18px; }
+.contact-link:hover { transform: translateX(4px); background: var(--cream); }
+.contact-link.primary-contact { border-color: var(--blue); background: var(--blue); }
+.contact-link.primary-contact small { color: rgba(23,35,61,.62); }
+.contact-link.primary-contact:hover { border-color: var(--coral); background: var(--coral); color: white; }
+.contact-link.primary-contact:hover small { color: rgba(255,255,255,.72); }
+.button-ghost { width: 100%; min-height: 50px; margin-top: 12px; border: 1px solid var(--navy); background: transparent; color: var(--navy); }
+.button-ghost:hover { background: var(--navy); color: white; }
 .copy-feedback { min-height: 42px; margin: 12px 0 0; color: var(--violet) !important; font-size: 11px !important; }
+.temporary-note { margin: 0 0 20px; padding: 12px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 10px !important; }
 .contact-meta { margin-top: 22px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr; }
 .contact-meta > div { padding: 20px 10px 0 0; display: flex; flex-direction: column; gap: 7px; }
 .contact-meta small { color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: .11em; }
